@@ -1,0 +1,23 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = "$all$username $character"
+palette = 'mocha'
+
+[palettes.mocha]
+pink = '#f5c2e7'
+lavander = '#b4befe'
+blue = '#89b4fa'
+
+[container]
+style = 'bold blue'
+symbol = '📦'
+format= '[$symbol \[ $name \]]($style)'
+
+[username]
+disabled = true
+show_always = true
+format = "[$user]($style)"
+
+[directory]
+format = " [$path]($style)[$read_only]($read_only_style) "
+style = 'bold pink'

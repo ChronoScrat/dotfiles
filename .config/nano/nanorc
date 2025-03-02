@@ -1,0 +1,34 @@
+# Configuration file for the Nano Editor
+
+# Autoindent new lines
+set autoindent
+
+# Set backups and a backupdir
+# I'll leave this disabled for now
+# set backup
+# set backupdir ~/.cache/nano/backup
+
+# Wrap long lines
+set breaklonglines
+
+# Soft wrap
+set softwrap
+
+# Mouse support
+# I'll leave this disabled
+# set mouse
+
+# Tabsize - set to 4 for Python compatibility
+set tabsize 4
+
+# Tab to spaces
+# set tabstospaces
+
+# Includes
+include "/usr/share/nano/python.nanorc"
+include "/usr/share/nano/yaml.nanorc"
+
+# Python-specific tabs
+extendsyntax python tabgives "    "
+
+

@@ -1,0 +1,7 @@
+[user]
+	name = Nathanael Rolim
+	email = natanael.rolim@hotmail.com
+[commit]
+	gpgsign = true
+[init]
+	defaultBranch = main

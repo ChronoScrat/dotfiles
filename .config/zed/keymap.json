@@ -1,0 +1,13 @@
+[
+  {
+    "bindings": {
+      "ctrl-'": "terminal_panel::ToggleFocus"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-`": "editor::ToggleSelectedDiffHunks"
+    }
+  }
+]

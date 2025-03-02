@@ -1,0 +1,61 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "assistant": {
+    "default_model": {
+      "provider": "ollama",
+      "model": "deepseek-coder:6.7b"
+    },
+    "version": "2"
+  },
+  "ui_font_size": 16,
+  "buffer_font_size": 15,
+  "theme": {
+    "mode": "system",
+    "light": "One Light",
+    "dark": "Catppuccin Macchiato - No Italics"
+  },
+  "buffer_font_family": "Iosevka",
+  "buffer_font_fallbacks": ["Zed Plex Mono"],
+  "language_models": {
+    "ollama": {
+      // This will connect Ollama to the running instance of Alpaca.
+      // A better solution in the future would be to return this to
+      // the default value (erase this block), run Ollama via Podman
+      // and connect both Alpaca and Zed and other Tools to it.
+      "api_url": "http://localhost:11435"
+    }
+  },
+  "soft_wrap": "editor_width",
+  "ensure_final_newline_on_save": true,
+  "tab_size": 2,
+  "terminal": {
+    "dock": "right",
+    "font_family": "Iosevka Term",
+    "button": true
+  },
+  "tabs": {
+    "file_icons": true,
+    "git_status": true
+  },
+  "preview_tabs": {
+    "enabled": true
+  },
+  // Language-specific config
+  "languages": {
+    "Python": {
+      "tab_size": 4,
+      "formatter": "language_server",
+      "format_on_save": "on"
+    }
+  },
+  "file_types": {
+    "Dockerfile": ["*Containerfile"]
+  }
+}
