@@ -1,0 +1,7 @@
+# Global ignore of .env files
+.env
+
+# Python
+
+## Jupyter
+.ipynb_checkpoints
