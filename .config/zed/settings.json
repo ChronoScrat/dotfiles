@@ -25,11 +25,9 @@
   "buffer_font_fallbacks": ["Zed Plex Mono"],
   "language_models": {
     "ollama": {
-      // This will connect Ollama to the running instance of Alpaca.
-      // A better solution in the future would be to return this to
-      // the default value (erase this block), run Ollama via Podman
-      // and connect both Alpaca and Zed and other Tools to it.
-      "api_url": "http://localhost:11435"
+      // Ollama is being run as a Quadlet
+      // This is shared between all apps that use Ollama
+      "api_url": "http://localhost:11434"
     }
   },
   "soft_wrap": "editor_width",
