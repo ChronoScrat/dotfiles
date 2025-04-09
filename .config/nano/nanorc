@@ -22,7 +22,10 @@ set softwrap
 set tabsize 4
 
 # Tab to spaces
-# set tabstospaces
+set tabstospaces
+
+# Multibuffer
+set multibuffer
 
 # Includes
 include "/usr/share/nano/python.nanorc"
