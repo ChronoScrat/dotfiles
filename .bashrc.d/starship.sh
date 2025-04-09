@@ -18,7 +18,6 @@ if type starship > /dev/null 2> /dev/null ; then
     
     if [ -f /run/systemd/container  ] || [ -f /.dockerenv ] || [ -f /run/.containerenv ]; then
         export STARSHIP_CONFIG=~/.config/starship/container.toml
-        eval "$(starship init bash)"
     else
         export STARSHIP_CONFIG=~/.config/starship/starship.toml
     fi

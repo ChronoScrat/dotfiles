@@ -24,13 +24,4 @@ if [ -d ~/.bashrc.d ]; then
 fi
 unset rc
 
-# Move this to a  bashrc.d
 
-if [ -f /run/.containerenv ]; then
-	true
-else
-	eval "$(oh-my-posh init bash --config ~/.local/share/oh-my-posh/themes/catppuccin_mocha.omp.json)"
-fi
-## When moving this to bashrc.d, make sure to include the proper checks
-## for running intel etc etc etc
-export LIBVA_DRIVER_NAME=iHD
