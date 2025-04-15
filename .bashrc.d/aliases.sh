@@ -20,9 +20,13 @@ fi
 # Git
 alias gaa='git add .'
 alias gcm='git commit -m'
+alias gce='git commit'
 alias gpo='git push -u origin'
 alias gpr='git pull --rebase'
 
+# Podman
+alias p='podman'
+alias pri='podman run -it --rm'
 
 # Ollama
 alias ollama-start='systemctl --user start ollama.service'
