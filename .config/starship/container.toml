@@ -11,7 +11,7 @@ blue = '#89b4fa'
 [container]
 style = 'bold blue'
 symbol = '📦'
-format= '[$symbol \[ $name \]]($style)'
+format= ' [$symbol \[ $name \]]($style)'
 
 [username]
 disabled = true
@@ -19,5 +19,24 @@ show_always = true
 format = "[$user]($style)"
 
 [directory]
-format = " [$path]($style)[$read_only]($read_only_style) "
+format = " [🖿  $path]($style)[$read_only]($read_only_style) "
 style = 'bold pink'
+
+[git_branch]
+style = 'lavander'
+symbol = ' '
+
+[git_status]
+style = 'lavander'
+format = '([\[ $all_status$ahead_behind\]]($style) )'
+conflicted = '≠$count '
+ahead = '⇡$count '
+behind = '⇣$count '
+diverged = '⇡${ahead_count} ⇣${behind_count} '
+untracked = '?$count '
+stashed = '$$count '
+modified = '!$count '
+staged = '+$count '
+renamed = '»$count '
+deleted = '✘$count '
+up_to_date = '≡ '
