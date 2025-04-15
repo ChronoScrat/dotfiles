@@ -1,7 +1,6 @@
 # Start Oh-My-Posh on bash
-# OMP should be installed in .local/bin/
-# The configuration file is the custom theme applied to Oh-My-Posh
+# I've disabled this in favour of starship, but I'm keeping it for backup
 
-if [ -f ~/.local/bin/oh-my-posh ]; then
-    eval "$(oh-my-posh init bash --config ~/.local/share/oh-my-posh/themes/catppuccin_mocha.omp.json)"  
-fi
+#if [ command -v oh-my-posh 2>&1 >/dev/null ]; then
+#    eval "$(oh-my-posh init bash --config ~/.config/oh-my-posh/catppuccin_mocha.omp.json)"  
+#fi
