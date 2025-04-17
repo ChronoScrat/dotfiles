@@ -1,4 +1,4 @@
-format = " $os $all"
+format = " $os $all $character"
 palette = 'catpuccin'
 
 [palettes.catpuccin]
@@ -28,6 +28,7 @@ surface0 = "#313244"
 base = "#1e1e2e"
 mantle = "#181825"
 crust = "#11111b"
+lavander = '#b4befe'
 
 [username]
 style_user = 'bold blue'
@@ -36,13 +37,13 @@ format = '[$user]($style) @ '
 
 [directory]
 style = 'bold pink'
-format = "📂 [$path]($style)[$read_only]($read_only_style) "
+format = "in [🖿  $path]($style)[$read_only]($read_only_style) "
 
 [hostname]
 style = 'bold lavender'
 ssh_only = false
-ssh_symbol = '🌐 '
-format = "[$ssh_symbol$hostname]($style) in "
+ssh_symbol = '🌐'
+format = "[$ssh_symbol$hostname]($style) "
 
 [os]
 disabled = false
@@ -91,3 +92,25 @@ Ubuntu = " "
 Unknown = " "
 Void = " "
 Windows = "󰍲 "
+
+[git_branch]
+style = 'lavander'
+symbol = ' '
+
+[git_status]
+style = 'lavander'
+format = '([\[ $all_status$ahead_behind\]]($style) )'
+conflicted = '≠$count '
+ahead = '⇡$count '
+behind = '⇣$count '
+diverged = '⇡${ahead_count} ⇣${behind_count} '
+untracked = '?$count '
+stashed = '$$count '
+modified = '!$count '
+staged = '+$count '
+renamed = '»$count '
+deleted = '✘$count '
+up_to_date = '≡ '
+
+[container]
+disabled = true
