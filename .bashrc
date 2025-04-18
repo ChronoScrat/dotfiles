@@ -24,4 +24,5 @@ if [ -d ~/.bashrc.d ]; then
 fi
 unset rc
 
-
+# CD Path
+CDPATH=".:~/Projects"
