@@ -1,0 +1,39 @@
+# Podman provider for DevPod
+# Taken from https://github.com/ThomasVitale/devpod-provider-podman
+# Licensed under the Apache 2.0 License
+name: podman
+version: v0.0.1
+icon: https://raw.githubusercontent.com/ThomasVitale/devpod-provider-podman/refs/heads/main/images/podman-logo-source.svg
+home: https://github.com/ThomasVitale/devpod-provider-podman
+description: |-
+  DevPod on Podman
+optionGroups:
+  - options:
+      - PODMAN_PATH
+      - INACTIVITY_TIMEOUT
+    name: "Advanced Options"
+options:
+  INACTIVITY_TIMEOUT:
+    description: "If defined, will automatically stop the container after the inactivity period. Examples: 10m, 1h"
+  PODMAN_PATH:
+    description: The path where to find the podman binary.
+    default: podman
+agent:
+  containerInactivityTimeout: ${INACTIVITY_TIMEOUT}
+  local: true
+  docker:
+    path: ${PODMAN_PATH}
+    install: false
+exec:
+  init: |-
+    # Check if Podman exists and is reachable
+    ${PODMAN_PATH} ps >/dev/null 2>&1
+    if [ $? -ne 0 ]; then
+      >&2 echo "Seems like Podman is not reachable on your system."
+      >&2 echo "Please make sure Podman is installed and running."
+      >&2 echo "You can verify if Podman is running correctly via '${DOCKER_PATH} ps'"
+      exit 1
+    fi
+
+  command: |-
+    "${DEVPOD}" helper sh -c "${COMMAND}"
