@@ -2,10 +2,12 @@
 
 # General
 alias ll='ls -lh'
+alias la='ls -lha'
 alias untar='tar xvzf'
 
-# Tools
-alias dbx='distrobox'
+# Misclicks
+alias çs='ls'
+alias car='cat' # I may one day want to use this one
 
 # Desktop
 if [[ -v XDG_SESSION_DESKTOP ]]; then
@@ -23,6 +25,9 @@ alias gcm='git commit -m'
 alias gce='git commit'
 alias gpo='git push -u origin'
 alias gpr='git pull --rebase'
+
+# Distrobox
+alias dbx='distrobox'
 
 # Podman
 alias p='podman'
