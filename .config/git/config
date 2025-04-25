@@ -1,9 +1,13 @@
 [user]
 	name = Nathanael Rolim
 	email = natanael.rolim@hotmail.com
+	signingkey = 96948680823B5116
 [commit]
 	gpgsign = true
 [init]
 	defaultBranch = main
 [tag]
 	gpgSign = true
+[alias]
+    logs = log
+    logd = log --oneline

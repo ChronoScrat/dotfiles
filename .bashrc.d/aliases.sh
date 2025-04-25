@@ -29,6 +29,18 @@ alias gpr='git pull --rebase'
 # Distrobox
 alias dbx='distrobox'
 
+alias c10s-create='distrobox assemble create --name c10s --file ~/.config/distrobox/distrobox.ini'
+alias c10s-nuke='distrobox assemble rm --name c10s --file ~/.config/distrobox/distrobox.ini'
+alias c10s='distrobox enter c10s'
+
+alias fedbox-create='distrobox assemble create --name fedbox --file ~/.config/distrobox/distrobox.ini'
+alias fedbox-nuke='distrobox assemble rm --name fedbox --file ~/.config/distrobox/distrobox.ini'
+alias fedbox='distrobox enter fedbox'
+
+alias ubuntu-create='distrobox assemble create --name ubuntu --file ~/.config/distrobox/distrobox.ini'
+alias ubuntu-nuke='distrobox assemble rm --name ubuntu --file ~/.config/distrobox/distrobox.ini'
+alias ubuntu='distrobox enter ubuntu'
+
 # Podman
 alias p='podman'
 alias pri='podman run -it --rm'
