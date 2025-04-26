@@ -1,3 +1,5 @@
+[core]
+	abbrev = 12
 [user]
 	name = Nathanael Rolim
 	email = natanael.rolim@hotmail.com
@@ -9,5 +11,5 @@
 [tag]
 	gpgSign = true
 [alias]
-    logs = log
-    logd = log --oneline
+	logs = log
+	logd = log --oneline
