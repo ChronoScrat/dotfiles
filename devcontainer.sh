@@ -4,6 +4,25 @@
 # set of the dotfiles inside a devcontainer. It can also be used inside
 # other minimal environments.
 
+# Check if we are in a directory called `dotfiles`. If not, we can assume
+# that the script is not being called from an already cloned repo, and is 
+# actually just being piped into the shell via curl.
+
+CWD="$(pwd)"
+CWD="$(basename $CWD)"
+
+if [ "$CWD" != "dotfiles" ]; then
+    if ! type git >/dev/null 2>&1; then
+        echo "Git is not installed"
+        exit 1
+    fi
+
+    git clone https://github.com/ChronoScrat/dotfiles.git
+    cd dotfiles/
+fi
+
+# Begin
+
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_BIN_HOME="$HOME/.local/bin" # Non-standard
