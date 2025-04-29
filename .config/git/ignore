@@ -1,6 +1,11 @@
 # Global ignore of .env files
 .env
 
+# Devcontainers
+## Local Devcontainers that may fit my particular
+## needs but that I do not wish to upstream
+.devcontainer/local/**
+
 # Python
 
 ## Jupyter
