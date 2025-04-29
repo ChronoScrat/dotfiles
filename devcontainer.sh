@@ -45,7 +45,8 @@ ln -sf $PWD/.config/git/ $XDG_CONFIG_HOME/git
 ln -sf $PWD/.config/nano/ $XDG_CONFIG_HOME/nano
 
 # Cleanup
-
+# NOTE: Devpod sets a helper script for credentials which
+# is useful to keep. Right now, this discards this helper.
 if [ -f $HOME/.gitconfig ]; then
     mv $HOME/.gitconfig $HOME/gitconfig.old
 fi
