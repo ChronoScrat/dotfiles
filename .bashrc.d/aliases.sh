@@ -45,6 +45,10 @@ alias ubuntu='distrobox enter ubuntu'
 alias p='podman'
 alias pri='podman run -it --rm'
 
+# Devpod
+alias dp='devpod'
+alias dpu='devpod up'
+
 # Ollama
 alias ollama-start='systemctl --user start ollama.service'
 alias ollama-stop='systemctl --user stop ollama.service'
