@@ -1,0 +1,6 @@
+#!/usr/bin/bash
+
+if [[ -f ~/.local/share/applications/com.desktop.ding.desktop ]]; then
+    desktop-file-edit ~/.local/share/applications/com.desktop.ding.desktop --set-key="NoDisplay" --set-value="true"
+fi
+
