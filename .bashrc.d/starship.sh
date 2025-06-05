@@ -16,7 +16,7 @@ if type starship > /dev/null 2> /dev/null ; then
     
     # TODO Add Distrobox-specific configuration (/run/.toolboxenv)
     
-    if [ -f /run/systemd/container  ] || [ -f /.dockerenv ] || [ -f /run/.containerenv ]; then
+    if [ -z "${container}" ]  ||  [ -f /run/systemd/container  ] || [ -f /.dockerenv ] || [ -f /run/.containerenv ] || [ -f /run/.toolboxenv ]  ; then
         export STARSHIP_CONFIG=~/.config/starship/container.toml
     else
         export STARSHIP_CONFIG=~/.config/starship/starship.toml
