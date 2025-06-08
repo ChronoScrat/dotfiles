@@ -1,7 +1,7 @@
 # Start Starship 🚀
 
 # Check if starship is present in the PATH
-if type starship > /dev/null 2> /dev/null ; then
+if ( type starship > /dev/null 2> /dev/null ) && [ "${XDG_SESSION_TYPE}" != "tty" ]; then
 
     # There are two configuration files, one for general terminals, and one for
     # terminals inside containers.
@@ -14,14 +14,13 @@ if type starship > /dev/null 2> /dev/null ; then
     # run with podman, and `/.dockerenv` file for containers run with docker, though the latter
     # is not always guaranteed to appear.
     
-    # TODO Add Distrobox-specific configuration (/run/.toolboxenv)
-    
-    if [ -z "${container}" ]  ||  [ -f /run/systemd/container  ] || [ -f /.dockerenv ] || [ -f /run/.containerenv ] || [ -f /run/.toolboxenv ]  ; then
+    if [ -f /run/systemd/container  ] || [ -f /.dockerenv ] || [ -f /run/.containerenv ] || [ -f /run/.toolboxenv ]; then
         export STARSHIP_CONFIG=~/.config/starship/container.toml
     else
         export STARSHIP_CONFIG=~/.config/starship/starship.toml
     fi
     
+    # TODO Add rule for "XDG_SESSION_TYPE" == "tty". This will not work outside of Linux but this is not a problem.
     eval "$(starship init bash)"
     
 fi
