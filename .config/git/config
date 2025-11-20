@@ -13,3 +13,6 @@
 [alias]
 	logs = log
 	logd = log --oneline
+	co = checkout
+	fecth = fetch
+	c = commit
