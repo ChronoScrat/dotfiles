@@ -16,3 +16,4 @@
 	co = checkout
 	fecth = fetch
 	c = commit
+    sync = !git fetch && git pull
