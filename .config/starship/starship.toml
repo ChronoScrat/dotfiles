@@ -1,4 +1,4 @@
-format = " $os $all $character"
+format = " $os$all$character"
 palette = 'catpuccin'
 
 [palettes.catpuccin]

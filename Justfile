@@ -10,4 +10,11 @@ cp-from $file:
 
     cp $HOME/$file $file
 
+sync:
+    #!/usr/bin/bash
 
+    tt=$(find . -type f ! -path "./.git/*" ! -name "README.md" ! -name "Justfile" ! -name devcontainer.sh -printf '%P\n';)
+
+    for file in $tt; do
+        install -D $file $HOME/$file
+    done
