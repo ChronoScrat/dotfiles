@@ -37,9 +37,9 @@ alias fedbox-create='distrobox assemble create --name fedbox --file ~/.config/di
 alias fedbox-nuke='distrobox assemble rm --name fedbox --file ~/.config/distrobox/distrobox.ini'
 alias fedbox='distrobox enter fedbox'
 
-alias ubuntu-create='distrobox assemble create --name ubuntu --file ~/.config/distrobox/distrobox.ini'
-alias ubuntu-nuke='distrobox assemble rm --name ubuntu --file ~/.config/distrobox/distrobox.ini'
-alias ubuntu='distrobox enter ubuntu'
+alias ubuntu-create='distrobox assemble create --name ubuntubox --file ~/.config/distrobox/distrobox.ini'
+alias ubuntu-nuke='distrobox assemble rm --name ubuntubox --file ~/.config/distrobox/distrobox.ini'
+alias ubuntu='distrobox enter ubuntubox'
 
 # Podman
 alias p='podman'

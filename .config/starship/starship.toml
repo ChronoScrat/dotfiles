@@ -114,3 +114,6 @@ up_to_date = '≡ '
 
 [container]
 disabled = true
+
+[gcloud]
+disabled = true
