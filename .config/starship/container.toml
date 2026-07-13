@@ -40,3 +40,6 @@ staged = '+$count '
 renamed = '»$count '
 deleted = '✘$count '
 up_to_date = '≡ '
+
+[gcloud]
+disabled = true
