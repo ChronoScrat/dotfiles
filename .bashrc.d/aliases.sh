@@ -11,7 +11,20 @@ alias car='cat' # I may one day want to use this one
 
 # Desktop
 if [[ -v XDG_SESSION_DESKTOP ]]; then
+
 	alias open='xdg-open'
+
+	# Zed
+	# Zed is a bit of a complication. It can be installed stand-alone
+	# from the website OR as a flatpak. On Bluefin, however, the `zed`
+	# binary is taken by ZFS (useless to me).
+
+	if [ -f ~/.local/bin/zed ]; then
+		alias zed='${HOME}/.local/bin/zed'
+	elif [ flatpak info dev.zed.Zed &> /dev/null ]; then
+		alias zed='/usr/bin/flatpak run --branch=stable --command=zed-wrapper --file-forwarding dev.zed.Zed'
+	fi
+
 fi
 
 # GNOME exclusive
@@ -50,5 +63,6 @@ alias dp='devpod'
 alias dpu='devpod up'
 
 # Ollama
-alias ollama-start='systemctl --user start ollama.service'
-alias ollama-stop='systemctl --user stop ollama.service'
+# alias ollama-start='systemctl --user start ollama.service'
+# alias ollama-stop='systemctl --user stop ollama.service'
+
