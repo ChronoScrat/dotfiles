@@ -38,6 +38,7 @@ alias gcm='git commit -m'
 alias gce='git commit'
 alias gpo='git push -u origin'
 alias gpr='git pull --rebase'
+alias gph='git rev-parse HEAD'
 
 # Distrobox
 alias dbx='distrobox'
